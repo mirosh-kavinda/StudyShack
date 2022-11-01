@@ -1,0 +1,35 @@
+
+.para {
+  position: absolute;
+  text-align: start;
+  z-index: 0;
+  margin: 100px 0px 80px 10px;
+}
+.landing-image {
+  position: relative;
+  width: 900px;
+  height: 700px;
+  left: 460px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 960px) {
+
+  .header {
+
+    font-size: 100;
+    z-index: 0;
+  }
+  .buttons {
+    margin: 300px 100px 0px 100px;
+    position: absolute;
+    top: 300px;
+    z-index: 0;
+  }
+  .landing-image {
+    margin-top: 200px;
+    height: 350px;
+    width: 350px;
+    left:40px;
+  }
+}
