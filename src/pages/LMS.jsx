@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ModuleList() {
+function LMS() {
     return (
         <div>
             <h1>hello</h1>
@@ -8,4 +8,4 @@ function ModuleList() {
     );  
 }
 
-export default ModuleList;
+export default LMS;

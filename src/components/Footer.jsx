@@ -5,30 +5,26 @@ import {
   AiOutlineYoutube,
   AiOutlineTwitter,
   AiOutlineArrowUp,
-
 } from "react-icons/ai";
 
 const Footer = () => {
   const [showButton, setShowButton] = useState(false);
 
-  useEffect(
-    () => {
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-          setShowButton(+true);
-        } else {
-          setShowButton(false);
-        }
-      });
-    },
-    [],
-    );
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
 
   // This function will scroll the window to the top
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // for smoothly scrolling
+      behavior: "smooth",
     });
   };
   return (
@@ -99,36 +95,6 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div className="col-6 col-md-2 mb-3">
-                <h5>Section</h5>
-                <ul className="nav flex-column">
-                  <li className="nav-item mb-2">
-                    <a href="##" className="nav-link p-0 text-muted">
-                      Home
-                    </a>
-                  </li>
-                  <li className="nav-item mb-2">
-                    <a href="##" className="nav-link p-0 text-muted">
-                      Features
-                    </a>
-                  </li>
-                  <li className="nav-item mb-2">
-                    <a href="##" className="nav-link p-0 text-muted">
-                      Pricing
-                    </a>
-                  </li>
-                  <li className="nav-item mb-2">
-                    <a href="##" className="nav-link p-0 text-muted">
-                      FAQs
-                    </a>
-                  </li>
-                  <li className="nav-item mb-2">
-                    <a href="##" className="nav-link p-0 text-muted">
-                      About
-                    </a>
-                  </li>
-                </ul>
-              </div>
               {showButton && (
                 <button onClick={scrollToTop} className="back-to-top mx-2 ">
                   <AiOutlineArrowUp />
@@ -139,7 +105,7 @@ const Footer = () => {
                   <h5>Subscribe to our newsletter</h5>
                   <p>Monthly digest of what's new and exciting from us.</p>
                   <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-                    <label for="newsletter1" className="visually-hidden">
+                    <label htmlFor="newsletter1" className="visually-hidden">
                       Email address
                     </label>
                     <input

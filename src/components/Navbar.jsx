@@ -1,4 +1,3 @@
-
 import {  Link } from "react-router-dom";
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
@@ -24,9 +23,7 @@ const Navbar = ({ onRouteChange, isSignedIn }) => {
                   <Link
                   
                     to={item.path}
-                    smooth={true}
-                    offset={-50}
-                    duration={80}
+                  
                     onClick={showSidebar}
                   >
                     {item.icon}_<span>{item.title}</span>
@@ -80,10 +77,8 @@ const Navbar = ({ onRouteChange, isSignedIn }) => {
 
               <li className="nav-item ">
                 <Link
-                  to="login"
-                  
-                  className="nav-link   logo"
-                >
+                  to="signin"
+                  className="nav-link ">
                   {isSignedIn ? (
                     <nav
                       style={{ display: "flex", justifyContent: "flex-end" }}
@@ -101,9 +96,9 @@ const Navbar = ({ onRouteChange, isSignedIn }) => {
                     >
                       <h5
                         onClick={() => onRouteChange("signin")}
-                        className=" logo"
+                    
                       >
-                        Log In
+                        LogIn
                       </h5>
                     </nav>
                   )}

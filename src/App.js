@@ -1,12 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import ModuleList from "./pages/ModuleList";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Contact from "./components/Contact";
-import React ,{Component} from 'react';
-import Signin from './pages/Login/Signin';
-import Register from './pages/Login/Register';
+import Contact from "./pages/Contact";
+import React, { Component } from "react";
+import Signin from "./pages/Login/Signin";
+import Register from "./pages/Login/Register";
+import Courses from "./pages/Courses";
+import LMS from "./pages/LMS";
 
 const initialState = {
   input: "",
@@ -52,20 +53,37 @@ class App extends Component {
   render() {
     const { isSignedIn } = this.state;
 
-  return (
-    <>
-      <Navbar  isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="moduleList" element={<ModuleList />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="login" element={<Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>}/>
-        <Route path="register" element={<Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>}/>
-      </Routes>
-      <Footer />
-    </>
-   );
+    return (
+      <>
+        <Navbar isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="courses" element={<Courses />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="lms" element={<LMS />} />
+          <Route
+            path="signin"
+            element={
+              <Signin
+                loadUser={this.loadUser}
+                onRouteChange={this.onRouteChange}
+              />
+            }
+          />
+          <Route
+            path="register"
+            element={
+              <Register
+                loadUser={this.loadUser}
+                onRouteChange={this.onRouteChange}
+              />
+            }
+          />
+        </Routes>
+        <Footer className="fixed-bottom" />
+      </>
+    );
   }
 }
 
-export default App ;
+export default App;

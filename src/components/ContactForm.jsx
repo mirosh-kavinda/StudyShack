@@ -1,31 +1,30 @@
 import React, { useEffect } from "react";
 
-
-const Contact = () => {
+const ContactForm = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://js.hsforms.net/forms/v2.js";
+
     document.body.appendChild(script);
 
-    script.addEventListener("load", () => {
-      // @TS-ignore
-
+    const listener = () => {
       if (window.hbspt) {
         // @TS-ignore
+
         window.hbspt.forms.create({
-          region: "na1",
           portalId: "23220584",
           formId: "4116efab-f18a-4dad-b5cb-e43020656043",
-          target: '#hubspotForm',
+          target: "#hubspotForm",
         });
       }
-    });
+    };
+
+    script.addEventListener("load", listener);
+    return () => {
+      script.removeEventListener('load',listener)
+   };
   }, []);
 
-  return (
-    <div  style={{"margin":"80px", "padding":"80px" }}  > 
-      <div  id="hubspotForm"></div>
-    </div>
-  );
+  return <div classname=""id="hubspotForm"></div>;
 };
-export default Contact;
+export default ContactForm;
