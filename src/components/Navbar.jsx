@@ -1,14 +1,12 @@
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import { SidebarData ,NavBarData } from "../data/Data";
+import { SidebarData, NavBarData } from "../data/Data";
 import { IconContext } from "react-icons";
 import "../css/Navbar.css";
 
-
 const Navbar = ({ onRouteChange, isSignedIn }) => {
-
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
   return (
@@ -17,20 +15,23 @@ const Navbar = ({ onRouteChange, isSignedIn }) => {
         <nav className={sidebar ? "nav-menu active " : "nav-menu"}>
           <ul className="nav-menu-items " onClick={showSidebar}>
             <li className="navbar-toggle"></li>
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link
-                  
-                    to={item.path}
-                  
-                    onClick={showSidebar}
-                  >
-                    {item.icon}_<span>{item.title}</span>
-                  </Link>
-                </li>
-              );
-            })}
+           <div>
+            <div>
+              <h1>hello</h1>
+            </div>
+           <div>
+              {SidebarData.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName}>
+                    <Link to={item.path} onClick={showSidebar}>
+                      {item.icon}_<span>{item.title}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </div>
+           </div>
+           
           </ul>
         </nav>
         <nav className="navbar navbar-expand-lg  ">
@@ -38,7 +39,6 @@ const Navbar = ({ onRouteChange, isSignedIn }) => {
             <ul className="nav">
               <li className="nav-item">
                 <Link
-                  
                   aria-current="page"
                   aria-label="Toggle navigation"
                   aria-expanded="false"
@@ -53,10 +53,7 @@ const Navbar = ({ onRouteChange, isSignedIn }) => {
               </li>
 
               <li className="nav-item">
-                <Link
-                  className="nav-link "
-                  to='/'
-                >
+                <Link className="nav-link " to="/">
                   <h5>Memphis-Tutors</h5>
                 </Link>
               </li>
@@ -65,10 +62,7 @@ const Navbar = ({ onRouteChange, isSignedIn }) => {
               {NavBarData.map((item, index) => {
                 return (
                   <li key={index} className="nav-item">
-                    <Link
-                      to={item.path}
-                      className={item.cNavName}
-                    >
+                    <Link to={item.path} className={item.cNavName}>
                       <h5>{item.title}</h5>
                     </Link>
                   </li>
@@ -76,16 +70,15 @@ const Navbar = ({ onRouteChange, isSignedIn }) => {
               })}
 
               <li className="nav-item ">
-                <Link
-                  to="signin"
-                  className="nav-link ">
+                <Link to="signin" className="nav-link ">
                   {isSignedIn ? (
                     <nav
                       style={{ display: "flex", justifyContent: "flex-end" }}
                     >
                       <h5
                         onClick={() => onRouteChange("signout")}
-                        className=" logo" path='/'
+                        className=" logo"
+                        path="/"
                       >
                         Sign Out
                       </h5>
@@ -94,12 +87,7 @@ const Navbar = ({ onRouteChange, isSignedIn }) => {
                     <nav
                       style={{ display: "flex", justifyContent: "flex-end" }}
                     >
-                      <h5
-                        onClick={() => onRouteChange("signin")}
-                    
-                      >
-                        LogIn
-                      </h5>
+                      <h5 onClick={() => onRouteChange("signin")}>LogIn</h5>
                     </nav>
                   )}
                 </Link>
@@ -113,4 +101,3 @@ const Navbar = ({ onRouteChange, isSignedIn }) => {
 };
 
 export default Navbar;
-

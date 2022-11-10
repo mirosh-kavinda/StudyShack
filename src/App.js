@@ -1,13 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Contact from "./pages/Contact";
+import {Contact,Signin, Register, Tutors,Courses,Home} from "./pages";
 import React, { Component } from "react";
-import Signin from "./pages/Login/Signin";
-import Register from "./pages/Login/Register";
-import Courses from "./pages/Courses";
-import LMS from "./pages/LMS";
+
+
 
 const initialState = {
   input: "",
@@ -60,7 +57,7 @@ class App extends Component {
           <Route path="/" element={<Home />} />
           <Route path="courses" element={<Courses />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="lms" element={<LMS />} />
+          <Route path="tutors" element={<Tutors />} />
           <Route
             path="signin"
             element={
