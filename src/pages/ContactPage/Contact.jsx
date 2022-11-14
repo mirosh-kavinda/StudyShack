@@ -3,7 +3,8 @@ import React from 'react';
 
 function Contact() {
     return (
-        <div style={{"margin":"80px"   }}>
+        <div className="mx-5 p-5 mt-5 my-4">
+            <h1>Lets' Connect </h1>
             <ContactForm  />
         </div>
     );  

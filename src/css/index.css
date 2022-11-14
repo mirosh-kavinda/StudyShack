@@ -36,6 +36,11 @@ code {
   box-shadow: 20px;
 }
 
+.footer_placeholder {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 @media only screen and (max-width: 720px) {
 .logo{
   display: none;

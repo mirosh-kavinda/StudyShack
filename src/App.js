@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import {Contact,Signin, Register, Tutors,Courses,Home} from "./pages";
 import React, { Component } from "react";
-
+import './css/index.css';
 
 
 const initialState = {
@@ -77,7 +77,7 @@ class App extends Component {
             }
           />
         </Routes>
-        <Footer className="fixed-bottom" />
+        <Footer className="footer_placeholder" />
       </>
     );
   }
