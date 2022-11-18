@@ -16,9 +16,9 @@ code {
 }
 .back-to-top {
   position: fixed;
-  right: 40px;
+  right: 80px;
   font-size: 16px;
-  width: 40px;
+  width: 60px;
   cursor: pointer;
   bottom: 8px;
   border-radius: 100px;
@@ -45,4 +45,24 @@ code {
 .logo{
   display: none;
 }
+}
+
+.contact {
+  justify-content: center;
+  align-items: center;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 30px;
+  z-index: 1000;
+  margin: 8%;
+  border-radius: 40px;
 }

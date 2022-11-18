@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from 'react-router-dom';
 class Signin extends React.Component {
   constructor(props) {
     super(props);
@@ -66,24 +66,15 @@ class Signin extends React.Component {
                 placeholder="Password"
               />
             </div>
-            <div className="form-group form-check">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="exampleCheck1"
-              />
-              <label className="form-check-label" for="exampleCheck1">
-                Check me out
-              </label>
-            </div>
-            <button type="submit" className="btn btn-primary">
+          
+            <button type="submit" className="mt-4 btn btn-dark">
               Submit
             </button>
             <div className="lh-copy mt3">
-              <p className="f6 link dim black db pointer">
+              <p className="f6 mt-3 link dim black db pointer">
                 I don't have an account?
                 <span onClick={() => onRouteChange("register")}>
-                  <button className="m-2">Regsiter</button>
+                 <Link to ="/register"> Regsiter</Link> 
                 </span>
               </p>
             </div>

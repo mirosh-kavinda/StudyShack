@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import useHubspotChat from "./ChatBot";
 import {
   AiOutlineInstagram,
   AiOutlineYoutube,
@@ -27,6 +27,7 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+  useHubspotChat();
   return (
     <>
       <div className="footer">
@@ -34,7 +35,7 @@ const Footer = () => {
           <footer className="py-5">
             <div className="row">
               <div className="col-6 col-md-2 mb-3">
-                <h5>Section</h5>
+                <h5>Navigation</h5>
                 <ul className="nav flex-column">
                   <li className="nav-item mb-2">
                     <a href="##" className="nav-link p-0 text-muted">
@@ -65,7 +66,7 @@ const Footer = () => {
               </div>
 
               <div className="col-6 col-md-2 mb-3">
-                <h5>Section</h5>
+                <h5>Help</h5>
                 <ul className="nav flex-column">
                   <li className="nav-item mb-2">
                     <a href="##" className="nav-link p-0 text-muted">
@@ -74,24 +75,15 @@ const Footer = () => {
                   </li>
                   <li className="nav-item mb-2">
                     <a href="##" className="nav-link p-0 text-muted">
-                      Features
+                     Online Helper
                     </a>
                   </li>
                   <li className="nav-item mb-2">
                     <a href="##" className="nav-link p-0 text-muted">
-                      Pricing
+                      Education Centers
                     </a>
                   </li>
-                  <li className="nav-item mb-2">
-                    <a href="##" className="nav-link p-0 text-muted">
-                      FAQs
-                    </a>
-                  </li>
-                  <li className="nav-item mb-2">
-                    <a href="##" className="nav-link p-0 text-muted">
-                      About
-                    </a>
-                  </li>
+                
                 </ul>
               </div>
 
@@ -114,7 +106,7 @@ const Footer = () => {
                       className="form-control"
                       placeholder="Email address"
                     />
-                    <button className="btn btn-primary" type="button">
+                    <button className="btn btn-dark" type="button">
                       Subscribe
                     </button>
                   </div>

@@ -47,9 +47,10 @@ class App extends Component {
     }
     this.setState({ route: route });
   };
+
   render() {
     const { isSignedIn } = this.state;
-
+   
     return (
       <>
         <Navbar isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
