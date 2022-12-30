@@ -1,0 +1,68 @@
+body {
+  background:linear-gradient(to left,#FF6E4A
+ 20%, #8C92AC 100%);
+ font-style: normal;
+ 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.back-to-top {
+  position: fixed;
+  right: 80px;
+  font-size: 16px;
+  width: 60px;
+  cursor: pointer;
+  bottom: 8px;
+  border-radius: 100px;
+}
+
+.back-to-top:hover {
+  background: #d85f01;
+ 
+  transform: scale(1.3);
+}
+
+.footer {
+  bottom: 0px;
+  background: whitesmoke;
+  box-shadow: 20px;
+}
+
+.footer_placeholder {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+@media only screen and (max-width: 720px) {
+.logo{
+  display: none;
+}
+}
+
+.contact {
+  justify-content: center;
+  align-items: center;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 30px;
+  z-index: 1000;
+  margin: 8%;
+  border-radius: 40px;
+}

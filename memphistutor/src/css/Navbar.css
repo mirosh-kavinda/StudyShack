@@ -1,0 +1,102 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background:whitesmoke;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+    }
+    .logo,.nav-link{
+        color:black;
+    }
+    .logo:hover,.nav-link:hover{
+        color: #d65d3f;
+    }
+    
+    .menu-bars{
+        margin-left: 2rem;
+        font-size:3rem;
+        background:none;
+    }
+    .ul{
+        padding-inline-start:0px;
+    }
+    .vert-align {
+        top:0;
+        position: fixed;
+        z-index:1;
+    }
+    
+  
+    .nav-menu{
+        background-color: whitesmoke;
+      width:250px;
+      height :100vh;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      top:0;
+      left:-80%;
+      transition:850ms;
+      z-index: 1;
+    
+  }
+  .nav-menu.active{
+       left:0;
+       transition: 450ms;
+  }
+  
+  .nav-text{
+      display: flex;
+      justify-content:flex-start;
+      align-items: center ;
+      padding: 8px, 0px, 8px, 16px;
+      list-style:none ;
+      height: 50px;
+  }
+  .nav-text a{
+      text-decoration: none;
+      color:black;
+      font-size: 15px;
+      width:95%;
+      height:100%;
+      display: flex;
+      align-items: center;
+      padding:0 16px;
+      border-radius: 4px;
+  }
+  
+  .nav-text a:hover{
+      background-color: #da7a46;
+  
+  }
+  .nav-menu-items{
+      height: 100%;
+      width:100%
+  }
+  .navbar-toggle{
+   
+      width: 100%;
+      height :80px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+  }
+  .span{
+      margin-left:16px;
+  }
+  .toggle_btn{
+    display: none;
+  }
+  @media only screen and (max-width:960px) {
+   .toggle_btn{
+    display: block;
+   }
+   .logo{
+    display: none;
+   }
+  }
+  
